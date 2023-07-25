@@ -1,11 +1,13 @@
+import Layout from "./components/Layout/Layout";
+import NavBar from "./components/NavBar/NavBar";
 
 
 function App() {
   return (
-
-    <h1>
-      Remote Work
-    </h1>
+    <Layout>
+      <NavBar />
+      <h1>remote work</h1>
+    </Layout>
   )
 
 }
