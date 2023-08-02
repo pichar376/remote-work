@@ -1,9 +1,13 @@
 import { styled } from "styled-components";
 
 export const LayoutSltyled = styled.div`
-background-color: #eee;
+max-width: 80vw;
+min-width:30vw;
 height: 100vh;
 margin: 0 auto;
-max-width:960px;
-min-width:330px;
+
+/* @media(max-width:600px){
+  width:60vw;
+} */
+
 `

@@ -7,6 +7,7 @@ import {
   ContainerMenuBurguer,
   MenuLinks,
   NavBarStyled,
+  SnapStyle,
 } from "./stylesNavBar";
 
 const NavBar = ({ active, setActive }) => {
@@ -15,7 +16,7 @@ const NavBar = ({ active, setActive }) => {
   };
   return (
     <NavBarStyled>
-      <h3 className="snap">snap</h3>
+      <SnapStyle className="snap">snap</SnapStyle>
       <MenuLinks active={active}>
         <DropDownFeatures
           name="Features"

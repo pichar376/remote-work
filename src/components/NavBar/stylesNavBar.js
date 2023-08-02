@@ -51,15 +51,13 @@ align-items:center;
   flex-flow:column wrap;
     gap:2rem;
   
-  .register{
-    
-    
+  .register{      
     &:hover{
      border:thin solid;
      color:#000;
     }
   }
-
+}
 `
 export const ContainerMenuBurguer = styled.article`
  display:none;
@@ -76,9 +74,14 @@ width:100%;
 display:flex;
 justify-content:space-evenly;
 align-items:center;
-heigth:3rem;
+height:3rem;
 
 @media(max-width:770px){
+  display:none;
+  
+}
+
+/* @media(max-width:770px){
    position:absolute;
   background-color:white;
   width:60vw;
@@ -99,9 +102,9 @@ heigth:3rem;
     font-weight:700;
    } 
   }
-
-
-}
+} */
+`
+export const SnapStyle = styled.h1`
+font-weight:700;
 
 `
-
