@@ -1,16 +1,16 @@
 import { styled } from "styled-components"
 
 export const NavBarStyled = styled.nav`
-width:100%;
-display:flex;
-align-items:center;
-font-size:14px;
-@media(max-width:770px){
-  justify-content:space-between;
+ display:flex;
+ justify-content:space-between;
+ width:100%;
+ margin: 0 auto;
+ font-size:14px;
+ gap:1rem;
+ align-items:center;
+ 
+ @media(min-width:770px){
   align-items:baseline;
-  .snap{
-    font-size:45px;
-  }
 }
 a{
   margin: 2em 2em;
@@ -23,12 +23,6 @@ a{
   @media(max-width:770px){
       margin:0;
     }
-}
-
-.snap{
-font-weight: 700;
-margin-right:1.5rem;
- margin-left:1rem;
 }
   `
 export const ContainerLoggin = styled.div`
@@ -44,6 +38,7 @@ align-items:center;
     width:5rem;
     height:2rem;
     border-radius:10px;
+
  }
 
 @media(max-width:770px){
@@ -59,42 +54,24 @@ align-items:center;
   }
 }
 `
-export const ContainerMenuBurguer = styled.article`
- display:none;
-  @media(max-width:770px){
-    position:sticky;
-    right:.5rem;
-  display:block;
-    font-size:50px;
-    z-index:999;
-  }
-`
 export const MenuLinks = styled.div`
-width:100%;
-display:flex;
-justify-content:space-evenly;
+width:55%;
+display:none;
 align-items:center;
-height:3rem;
-
-@media(max-width:770px){
-  display:none;
-  
-}
-
-/* @media(max-width:770px){
    position:absolute;
   background-color:white;
-  width:60vw;
   top:0;
-  right:${({ active }) => (active ? "0" : "-45rem")};
   bottom:0;
-  display:flex;
+  right: 0;
   flex-flow:column wrap;
   align-items:center;
   justify-content:space-evenly;
    border-radius:15px 0 0 15px;
   transition:all .8s ease-in-out;
   z-index:999;
+
+  
+  
   a,.register{
     color: #00000075;
    &:hover{
@@ -102,9 +79,27 @@ height:3rem;
     font-weight:700;
    } 
   }
-} */
+  @media(max-width:770px){
+    &.active{
+  right:0;
+  display: flex;
+}
+  }
+   @media(min-width:790px){
+  display: flex;
+  width:100%;
+  flex-flow:row wrap;
+  height:auto;
+  position: initial;
+} 
 `
 export const SnapStyle = styled.h1`
+display:flex;
+align-items: center;
+font-weight: 700;
+margin-right:1.5rem;
+font-size:1.8rem;
 font-weight:700;
+
 
 `

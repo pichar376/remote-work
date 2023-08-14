@@ -6,9 +6,9 @@ import {
   MenuList,
   MydropDownButtonContainer,
   StyledButtonCompany,
-} from "./stylesDropDowncompany";
+} from "./stylesDropDownCompany.js";
 
-const DropDownCompany = ({ name, item1, item2, item3 }) => {
+const DropDownCompany = ({ name, items }) => {
   const [click, setClick] = useState(false);
 
   // arrows that will be after the button
@@ -28,7 +28,7 @@ const DropDownCompany = ({ name, item1, item2, item3 }) => {
   const handleClick = () => {
     setClick(!click);
   };
-  console.log(downArrow);
+
   return (
     <MydropDownButtonContainer onClick={handleClick}>
       <StyledButtonCompany click={click}>
@@ -37,9 +37,11 @@ const DropDownCompany = ({ name, item1, item2, item3 }) => {
       </StyledButtonCompany>
 
       <MenuList click={click}>
-        <ItemList>{item1}</ItemList>
-        <ItemList>{item2}</ItemList>
-        <ItemList>{item3}</ItemList>
+        <div className="container-items">
+          {items.map((el, index) => (
+            <ItemList key={index}>{el}</ItemList>
+          ))}
+        </div>
       </MenuList>
     </MydropDownButtonContainer>
   );

@@ -1,10 +1,18 @@
-body {
-  background-color: #eee;
-}
 *,
 * ::after,
 * ::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+.App {
+  position: relative;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 30px;
+}
+@media (max-width: 790px) {
+  .active {
+    background-color: #00000080;
+  }
 }

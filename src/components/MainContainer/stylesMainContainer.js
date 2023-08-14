@@ -14,6 +14,7 @@ margin:4rem auto;
 @media(min-width:960px){
  min-height:60%;
 }
+
   
 `
 
@@ -24,12 +25,12 @@ width:100%;
 height:100%;
 
 img{
-  max-width:100%;
+  max-width:300px;
   min-width:200px;
   height:auto;
 }
 @media(min-width:770px){
-  order:1;
+  order:2;
   justify-content: center;
 }
 `
@@ -40,14 +41,15 @@ export const MakeSectionStyle = styled.div`
   display:flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
-  order:2;
-  gap:2rem;
-  width:100%;
   align-items: center;
-
-@media(min-width:770px){
-
   order:1;
+  gap:2.5rem;
+  width:100%;
+  
+  @media(min-width:770px){
+    
+    align-items:flex-start;
+    order:1;
 justify-content: space-between;
 align-items:flex-start;
   
@@ -108,7 +110,11 @@ export const ButtonLearnMore = styled.button`
      font-size:12px;
      background-color:#000;
      font-weight:600;
-
+     transition:all .3s ease-in-out;
+&:hover{
+   color:#000;
+  background-color: #fff;
+}
 `
 
 export const ContainerImagesStyle = styled.div`

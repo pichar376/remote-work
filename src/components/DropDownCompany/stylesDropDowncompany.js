@@ -17,7 +17,7 @@ margin:0;
 
 
 
-export const MenuList = styled.ul`
+export const MenuList = styled.div`
 display:flex;
  visibility:${({ click }) => (click ? "visible" : "hidden")};
   opacity:${({ click }) => (click ? "1" : "0")};
@@ -25,15 +25,26 @@ display:flex;
  box-shadow: 0 0 1rem #00000025;
  border-radius:3px;
  position: absolute;
- flex-flow:column wrap;
+ flex-flow:column nowrap;
  justify-content:space-evenly;
 top:2rem;
 width:5rem;
 height:6rem;
 left:0rem;
 transition:all .3s ease-in;
-
-    @media(max-width:770px){
+.container-items{ 
+  height:100%;
+  display:flex;
+  position:relative;
+  flex-direction:column;
+  justify-content:space-evenly;
+}
+&>p{
+  position:absolute;
+  top:1rem;
+}
+ 
+@media(max-width:770px){
   position:initial;
   display:block;
   visibility:${({ click }) => (click ? "visible" : "hidden")};
@@ -46,10 +57,9 @@ transition:all .3s ease-in;
   }
 `
 
-export const ItemList = styled.li`
-list-style-type:none;
-margin-left:-1.4rem;
+export const ItemList = styled.p`
 font-size:15px;
+margin-left:.3rem;
 @media(max-width:770px){
    display:flex;
    align-items:center;

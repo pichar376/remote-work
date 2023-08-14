@@ -20,13 +20,12 @@ background-color: white;
 
   @media(max-width:770px){
   position:initial;
-  display:block;
   visibility:${({ click }) => (click ? "visible" : "hidden")};
   opacity:${({ click }) => (click ? "1" : "0")};
   margin:0;
   height:auto;
   box-shadow:0 0 0;
-   transform: translateX(-8em);
+  transform:translate(0);
   }
 
   `
