@@ -1,12 +1,11 @@
 import { useState } from "react";
-import styledComponents from "styled-components";
 import {
   Button,
   ItemList,
   MenuList,
   MydropDownButtonContainer,
   StyledButtonCompany,
-} from "./stylesDropDownCompany.js";
+} from "./stylesDropDownCompany";
 
 const DropDownCompany = ({ name, items }) => {
   const [click, setClick] = useState(false);
@@ -30,8 +29,11 @@ const DropDownCompany = ({ name, items }) => {
   };
 
   return (
-    <MydropDownButtonContainer onClick={handleClick}>
-      <StyledButtonCompany click={click}>
+    <MydropDownButtonContainer>
+      <StyledButtonCompany
+        onClick={handleClick}
+        className={`${click ? "active" : ""}`}
+      >
         <Button>{name}</Button>
         {click ? downArrow : upArrow}
       </StyledButtonCompany>

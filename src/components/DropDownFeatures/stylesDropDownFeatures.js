@@ -22,7 +22,7 @@ background-color: white;
   position:initial;
   visibility:${({ click }) => (click ? "visible" : "hidden")};
   opacity:${({ click }) => (click ? "1" : "0")};
-  margin:0;
+  margin-top:1rem;
   height:auto;
   box-shadow:0 0 0;
   transform:translate(0);
@@ -44,7 +44,7 @@ export const ItemList =
     display:flex;
     justify-content:flex-start;
      border-bottom:thin solid #00000025;
-     width:20rem;
+     width:6rem;
     gap:5px;
    transition:all .2s ease-in;
     &:hover{
@@ -58,12 +58,12 @@ display: flex;
   justify-content: space-evenly;
   width: 6em;
   border-radius: 2px;
-
 input{
 border:none;
 color:${({ click }) => (click ? "black" : "#00000075")};
 margin-right:.5rem;
 transition:all .3s ease-in-out;
+background-color: transparent;
 &:hover{
       color:#000;
     }
@@ -88,4 +88,5 @@ flex-direction:column;
 align-items:center;
 justify-content:center;
 transition:all .3s ease-in;
+background-color: transparent;
 `

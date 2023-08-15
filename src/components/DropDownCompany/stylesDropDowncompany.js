@@ -4,6 +4,9 @@ export const MydropDownButtonContainer = styled.div`
 margin:2em 2em;
 position:relative;
 align-items:center;
+background-color: transparent;
+
+
 input:hover{
       color:#000;
     }
@@ -49,11 +52,11 @@ transition:all .3s ease-in;
   display:block;
   visibility:${({ click }) => (click ? "visible" : "hidden")};
   opacity:${({ click }) => (click ? "1" : "0")};
-  margin:0;
+  margin-top:1rem;
   height:auto;
   
   box-shadow:0 0 0;
-   transform: translateX(-8rem);
+   transform: translateX(-.7rem);
   }
 `
 
@@ -64,7 +67,7 @@ margin-left:.3rem;
    display:flex;
    align-items:center;
      border-bottom:thin solid #00000025;
-     width:20rem;;
+     width:5.5rem;
      transition:all .2s ease-in;
     &:hover{
         background-color:#00000010;
@@ -76,10 +79,12 @@ margin-left:.3rem;
 export const StyledButtonCompany = styled.section`
 display:flex;
 align-items:center;
+background-color: transparent;
 `
 
 export const Button = styled.button`
 border:none;
+background-color: transparent;
 color:${({ click }) => (click ? "black" : "#00000075")};
 margin-right:.5rem;
 transition:all .3s ease-in-out;
@@ -87,7 +92,6 @@ transition:all .3s ease-in-out;
       color:#000;
     }
 @media(max-width:770px){
-  background-color:transparent;
  &:hover{
  color:#000;
     }

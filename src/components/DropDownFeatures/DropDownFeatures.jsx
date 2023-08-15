@@ -6,7 +6,10 @@ import {
   StyledButtonFeatures,
 } from "./stylesDropDownFeatures";
 
-const DropDownFeatures = ({ name, item1, item2, item3, item4 }) => {
+const DropDownFeatures = ({
+  name = "nameButton",
+  items = ["item1", "item2", "item3", "item4"],
+}) => {
   const [click, setClick] = useState(false);
 
   // arrows that will be after the button
@@ -40,7 +43,7 @@ const DropDownFeatures = ({ name, item1, item2, item3, item4 }) => {
               fill="#726CEE"
             />
           </svg>
-          {item1}
+          {items[0]}
         </ItemList>
         <ItemList>
           <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +52,7 @@ const DropDownFeatures = ({ name, item1, item2, item3, item4 }) => {
               fill="#4BB1DA"
             />
           </svg>
-          {item2}
+          {items[1]}
         </ItemList>
         <ItemList>
           <svg width="13" height="17" xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +61,7 @@ const DropDownFeatures = ({ name, item1, item2, item3, item4 }) => {
               fill="#EDD556"
             />
           </svg>
-          {item3}
+          {items[2]}
         </ItemList>
         <ItemList>
           <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +70,7 @@ const DropDownFeatures = ({ name, item1, item2, item3, item4 }) => {
               fill="#8E4CB6"
             />
           </svg>
-          {item4}
+          {items[3]}
         </ItemList>
       </ContainerList>
     </MydropDownContainer>
