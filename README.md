@@ -16,6 +16,4 @@ $ npm start
 
 ## How to use the page
 
-```sh
- $ remote-make-work.netlify.app
-```
+https://remote-make-work.netlify.app
