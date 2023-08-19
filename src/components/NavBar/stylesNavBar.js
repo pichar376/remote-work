@@ -56,7 +56,7 @@ align-items:center;
 `
 export const MenuLinks = styled.div`
 width:55%;
-display:none;
+display:flex;
 align-items:center;
    position:absolute;
   background-color:white;
@@ -65,6 +65,7 @@ align-items:center;
   right: 0;
   flex-flow:column wrap;
   align-items:center;
+  transform:translateX(25rem);
   justify-content:space-evenly;
    border-radius:15px 0 0 15px;
   transition:all .8s ease-in-out;
@@ -81,8 +82,7 @@ align-items:center;
   }
   @media(max-width:770px){
     &.active{
-  right:0;
-  display: flex;
+   transform:translateX(0);
 }
   }
    @media(min-width:790px){
@@ -100,6 +100,4 @@ font-weight: 700;
 margin-right:1.5rem;
 font-size:1.8rem;
 font-weight:700;
-
-
 `
