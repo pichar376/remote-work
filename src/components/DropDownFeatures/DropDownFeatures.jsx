@@ -10,7 +10,7 @@ const DropDownFeatures = ({
   name = "nameButton",
   items = ["item1", "item2", "item3", "item4"],
 }) => {
-  const [click, setClick] = useState(false);
+  const [showList, setShowList] = useState("");
 
   // arrows that will be after the button
   const downArrow = (
@@ -26,16 +26,18 @@ const DropDownFeatures = ({
   );
 
   const handleClick = () => {
-    setClick(!click);
+    setShowList((prevValue) => {
+      return prevValue === "show" ? "" : "show";
+    });
   };
 
   return (
     <MydropDownContainer>
-      <StyledButtonFeatures onClick={handleClick} click={click}>
+      <StyledButtonFeatures onClick={handleClick} className={showList}>
         <input value={name} type="button" />
-        {click ? downArrow : upArrow}
+        {showList ? downArrow : upArrow}
       </StyledButtonFeatures>
-      <ContainerList click={click}>
+      <ContainerList className={showList}>
         <ItemList>
           <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg">
             <path

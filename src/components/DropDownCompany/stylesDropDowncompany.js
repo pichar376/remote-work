@@ -1,26 +1,53 @@
 import { styled } from "styled-components"
 
 export const MydropDownButtonContainer = styled.div`
-margin:2em 2em;
+margin:0 2em;
 position:relative;
 align-items:center;
 background-color: transparent;
 
+&:hover{
+  cursor:pointer;
+}
 
 input:hover{
       color:#000;
     }
-svg:hover{
-cursor:pointer;
-}
-@media(max-width:770px){
+
+    
+@media(min-width:770px){
 margin:0;
+
+svg{
+      margin-left:.5rem;
+       }
 }
 `
 
 
 
 export const MenuList = styled.div`
+
+  position:initial;
+  display:block;
+  visibility: hidden;
+  opacity:0;
+  margin-top:1rem;
+  height:auto;
+  width:5rem;
+  height:6rem;  
+  box-shadow:0 0 0;
+   transform: translateX(-.7rem);
+   transition:all .3s ease-in;
+  
+   &.show{
+     visibility:visible;
+  opacity:1;
+   }
+
+@media(min-width:790px){
+
+
 display:flex;
  visibility:${({ click }) => (click ? "visible" : "hidden")};
   opacity:${({ click }) => (click ? "1" : "0")};
@@ -30,11 +57,9 @@ display:flex;
  position: absolute;
  flex-flow:column nowrap;
  justify-content:space-evenly;
-top:2rem;
-width:5rem;
-height:6rem;
+top:1rem;
 left:0rem;
-transition:all .3s ease-in;
+
 .container-items{ 
   height:100%;
   display:flex;
@@ -42,27 +67,16 @@ transition:all .3s ease-in;
   flex-direction:column;
   justify-content:space-evenly;
 }
+}
 &>p{
   position:absolute;
   top:1rem;
 }
- 
-@media(max-width:770px){
-  position:initial;
-  display:block;
-  visibility:${({ click }) => (click ? "visible" : "hidden")};
-  opacity:${({ click }) => (click ? "1" : "0")};
-  margin-top:1rem;
-  height:auto;
-  
-  box-shadow:0 0 0;
-   transform: translateX(-.7rem);
-  }
-`
+ `
 
 export const ItemList = styled.p`
+padding:0 .3rem;
 font-size:15px;
-margin-left:.3rem;
 @media(max-width:770px){
    display:flex;
    align-items:center;
@@ -90,6 +104,7 @@ margin-right:.5rem;
 transition:all .3s ease-in-out;
 &:hover{
       color:#000;
+      cursor:pointer;
     }
 @media(max-width:770px){
  &:hover{

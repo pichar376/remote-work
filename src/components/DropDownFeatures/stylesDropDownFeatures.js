@@ -13,11 +13,19 @@ background-color: white;
   border-radius: 0.3em;
   list-style-type: none;
   padding: 0;
-   visibility:${({ click }) => (click ? "visible" : "hidden")};
-  opacity:${({ click }) => (click ? "1" : "0")};
+   visibility:hidden;   
+  opacity:0;
   z-index: 999;
   transition:all .3s ease-in;
 
+  &:hover{
+  cursor:pointer;
+}
+
+  &.show{
+    visibility:visible;    
+    opacity:1;
+  }
   @media(max-width:770px){
   position:initial;
   visibility:${({ click }) => (click ? "visible" : "hidden")};
@@ -60,16 +68,23 @@ display: flex;
   border-radius: 2px;
 input{
 border:none;
-color:${({ click }) => (click ? "black" : "#00000075")};
+color:#00000075;
 margin-right:.5rem;
 transition:all .3s ease-in-out;
 background-color: transparent;
+&.show{
+  color:black;
+}
 &:hover{
       color:#000;
+      cursor:pointer;
     }
     svg{
       margin-left:3rem;
-    }
+       }
+      & svg:hover{
+        cursor:pointer;
+      }
 @media(max-width:770px){
   background-color:transparent;
       &:hover{
