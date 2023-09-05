@@ -8,7 +8,7 @@ import {
 } from "./stylesDropDownCompany";
 
 const DropDownCompany = ({ name, items }) => {
-  const [showList, setShowList] = useState("");
+  const [showListCompany, setShowListCompany] = useState(false);
 
   // arrows that will be after the button
 
@@ -25,18 +25,19 @@ const DropDownCompany = ({ name, items }) => {
   );
 
   const handleClick = () => {
-    setShowList((prevValue) => {
-      return prevValue === "show" ? "" : "show";
-    });
+    setShowListCompany(!showListCompany);
   };
   return (
     <MydropDownButtonContainer>
-      <StyledButtonCompany onClick={handleClick} className={showList}>
+      <StyledButtonCompany
+        onClick={handleClick}
+        className={`${showListCompany ? "show" : ""}`}
+      >
         <Button>{name}</Button>
-        {showList ? downArrow : upArrow}
+        {showListCompany ? downArrow : upArrow}
       </StyledButtonCompany>
 
-      <MenuList className={showList}>
+      <MenuList className={`${showListCompany ? "show" : ""}`}>
         <div className="container-items">
           {items.map((el, index) => (
             <ItemList key={index}>{el}</ItemList>

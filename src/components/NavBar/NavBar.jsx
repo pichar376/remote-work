@@ -2,13 +2,12 @@ import DropDownFeatures from "../DropDownFeatures/DropDownFeatures";
 import DropDownCompany from "../DropDownCompany/DropDownCompany";
 
 import {
-  ContainerLoggin,
+  ContainerLogin,
   MenuLinks,
   NavBarStyled,
   SnapStyle,
 } from "./stylesNavBar";
 import MenuBurguer from "../MenuBurguer/MenuBurguer";
-import { Link } from "react-router-dom";
 
 const NavBar = ({ isActive, setIsActive }) => {
   //these is the replace to items from DropDownFeatures Component
@@ -31,14 +30,14 @@ const NavBar = ({ isActive, setIsActive }) => {
           <a href="#">Careers</a>
           <a href="#">About</a>
         </div>
-        <ContainerLoggin>
+        <ContainerLogin>
           <a href="#" className="login-button">
-            Loggin
+            Login
           </a>
           <a href="#" className="register">
             <span>Register</span>
           </a>
-        </ContainerLoggin>
+        </ContainerLogin>
       </MenuLinks>
       <MenuBurguer handleMenu={handleMenu} isActive={isActive} />
     </NavBarStyled>

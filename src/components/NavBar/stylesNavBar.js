@@ -1,4 +1,4 @@
-import { styled } from "styled-components"
+import styled from "styled-components"
 
 export const NavBarStyled = styled.nav`
  display:flex;
@@ -18,7 +18,8 @@ export const NavBarStyled = styled.nav`
      color:#000;
      cursor:pointer;
     }
-  }
+   
+      }
   @media(min-width:770px){
     align-items:baseline;
     a{
@@ -27,7 +28,7 @@ export const NavBarStyled = styled.nav`
     }
  }
   `
-export const ContainerLoggin = styled.div`
+export const ContainerLogin = styled.div`
 display:flex;
 flex-flow:column wrap;
 gap:2rem;
@@ -42,6 +43,7 @@ border:thin solid gray;
 height:2rem;
 border-radius:10px;
 width:8rem;
+
    &:hover{
     color:#00000050;
     font-weight:700;

@@ -1,4 +1,5 @@
-import { styled } from "styled-components"
+import styled from "styled-components"
+
 
 export const MydropDownButtonContainer = styled.div`
 margin:0 2em;
@@ -24,11 +25,8 @@ svg{
 }
 `
 
-
-
 export const MenuList = styled.div`
 
-  position:initial;
   display:block;
   visibility: hidden;
   opacity:0;
@@ -37,28 +35,23 @@ export const MenuList = styled.div`
   width:5rem;
   height:6rem;  
   box-shadow:0 0 0;
-   transform: translateX(-.7rem);
-   transition:all .3s ease-in;
+  transform: translateX(-.7rem);
+  transition:opacity .3s ease-in;
   
    &.show{
      visibility:visible;
-  opacity:1;
+     opacity:1;
    }
 
-@media(min-width:790px){
-
-
-display:flex;
- visibility:${({ click }) => (click ? "visible" : "hidden")};
-  opacity:${({ click }) => (click ? "1" : "0")};
- background-color: white;
- box-shadow: 0 0 1rem #00000025;
- border-radius:3px;
- position: absolute;
- flex-flow:column nowrap;
- justify-content:space-evenly;
-top:1rem;
-left:0rem;
+@media(min-width:790px){  
+     background-color: white;
+     box-shadow: 0 0 1rem #00000025;
+     border-radius:3px;
+     position: absolute;
+     flex-flow:column nowrap;
+     justify-content:space-evenly;
+     top:1rem;
+     left:0rem;
 
 .container-items{ 
   height:100%;
@@ -80,9 +73,8 @@ font-size:15px;
 @media(max-width:770px){
    display:flex;
    align-items:center;
-     border-bottom:thin solid #00000025;
-     width:5.5rem;
-     transition:all .2s ease-in;
+   border-bottom:thin solid #00000025;
+   width:5.5rem;
     &:hover{
         background-color:#00000010;
 }
@@ -93,22 +85,17 @@ font-size:15px;
 export const StyledButtonCompany = styled.section`
 display:flex;
 align-items:center;
-background-color: transparent;
 `
 
 export const Button = styled.button`
 border:none;
 background-color: transparent;
-color:${({ click }) => (click ? "black" : "#00000075")};
+color:#00000075;
 margin-right:.5rem;
-transition:all .3s ease-in-out;
 &:hover{
       color:#000;
       cursor:pointer;
     }
-@media(max-width:770px){
- &:hover{
- color:#000;
-    }
-}
+
+    
 `
