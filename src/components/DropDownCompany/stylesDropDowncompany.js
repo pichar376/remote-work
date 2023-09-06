@@ -6,6 +6,7 @@ margin:0 2em;
 position:relative;
 align-items:center;
 background-color: transparent;
+ -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
 &:hover{
   cursor:pointer;
